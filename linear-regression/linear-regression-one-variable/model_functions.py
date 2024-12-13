@@ -16,7 +16,7 @@ class Linear_Regression:
 
         # m = no. of data points
         # n = no. of features per data point
-        self.m, self.n = X.shape
+        self.m = X.shape[0]
 
         # w = weight (as many as features per data point, numpy arrray)
         # b = bias (random single value)
@@ -80,4 +80,4 @@ class Linear_Regression:
                 self.J_history.append(self.compute_cost(w, b))
                 self.p_history.append([w, b])
 
-        return w, b, self.J_history, self.p_history
+        return w, b  # , self.J_history, self.p_history
