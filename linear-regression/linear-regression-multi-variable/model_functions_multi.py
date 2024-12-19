@@ -61,7 +61,7 @@ class Linear_Regression_Multi:
 
             dj_dw, dj_db = self.compute_gradient(w, b)
 
-            if dj_dw == 0 and dj_db == 0:
+            if np.all(dj_dw == 0) and np.all(dj_db == 0):
                 break
 
             w = w - np.dot(self.alpha, dj_dw)
